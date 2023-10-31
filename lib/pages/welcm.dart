@@ -42,7 +42,7 @@ class Welcmpage extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/user');
                 },
                 child: Container(
                   padding: const EdgeInsets.all(15),

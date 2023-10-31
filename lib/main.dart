@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/pages/Adminmeal.dart';
+import 'package:my_app/pages/Adminpage.dart';
+import 'package:my_app/pages/Adminquery.dart';
 import 'package:my_app/pages/Creategirls.dart';
+import 'package:my_app/pages/Resolvequery.dart';
 import 'package:my_app/pages/bg.dart';
 import 'package:my_app/pages/cube.dart';
 import 'package:my_app/pages/dasboardgirls.dart';
@@ -62,7 +66,12 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => DisplayPage(),
         '/girlsprofile': (context) => Girlsprofile(),
         '/gaccount': (context) => GCreate_account(),
-        '/welcm': (context) => Welcmpage()
+        '/welcm': (context) => Welcmpage(),
+        '/user': (context) => Homepage(),
+        '/admin': (context) => Adminpage(),
+        '/adquery': (context) => AdminQuery(),
+        '/solve': (context) => ResolveQuery(),
+        '/admeal': (context) => Adminmeal()
       },
     );
   }

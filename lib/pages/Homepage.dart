@@ -55,22 +55,22 @@ class Homepage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     HostelBox(
-                      hostelType: 'GirlsHostel',
+                      hostelType: 'Admin login',
                       icon: Icons.local_florist,
                       color: Color.fromARGB(255, 117, 119, 121),
                       context: context,
                       onTap: () {
-                        Navigator.pushNamed(context, '/loging');
+                        Navigator.pushNamed(context, '/admin');
                       },
                     ),
                     SizedBox(width: 16.0),
                     HostelBox(
-                        hostelType: 'Boys Hostel',
+                        hostelType: 'User login',
                         icon: Icons.directions_run,
                         color: Color.fromARGB(255, 117, 119, 121),
                         context: context,
                         onTap: () {
-                          Navigator.pushNamed(context, '/loginb');
+                          Navigator.pushNamed(context, '/home');
                         })
                   ])
             ]),
