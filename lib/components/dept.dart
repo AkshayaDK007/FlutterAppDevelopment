@@ -26,49 +26,36 @@ class DepartmentbuttonState extends State<Departmentbutton> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.symmetric(horizontal: 20.0),
-      child: Scaffold(
-        body: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Container(
-                  child: SearchField(
-                    hint: 'Choose Department',
-                    searchInputDecoration: InputDecoration(
-                        enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey.shade400),
-                        ),
-                        fillColor: Colors.grey.shade200,
-                        filled: true,
-                        hintStyle: TextStyle(color: Colors.grey[500])),
-                    maxSuggestionsInViewPort: 6,
-                    itemHeight: 50,
-                    suggestionsDecoration: SuggestionDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    onSearchTextChanged: (value) {
-                      setState(() {
-                        _selectedItem = value;
-                      });
-                      widget.onDepartmentSelected(_selectedItem);
-                      print(value);
-                      return null;
-                    },
-                    suggestions: Departments.map((value) =>
-                            SearchFieldListItem(value, child: Text(value)))
-                        .toList(),
-                  ),
-                ),
-              ),
-            ],
-          ),
+      child: SearchField(
+        hint: 'Choose Department',
+        searchInputDecoration: InputDecoration(
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+              // borderRadius:
+              //    BorderRadius.all(Radius.circular(15)
+            ),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepPurple),
+                borderRadius: BorderRadius.circular(15)),
+            fillColor: Colors.grey.shade200,
+            filled: true,
+            hintStyle: TextStyle(color: Colors.grey[500])),
+        maxSuggestionsInViewPort: 6,
+        itemHeight: 50,
+        suggestionsDecoration: SuggestionDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
         ),
+        onSearchTextChanged: (value) {
+          setState(() {
+            _selectedItem = value;
+          });
+          widget.onDepartmentSelected(_selectedItem);
+          print(value);
+          return null;
+        },
+        suggestions: Departments.map(
+            (value) => SearchFieldListItem(value, child: Text(value))).toList(),
       ),
     );
   }

@@ -86,8 +86,8 @@ class Boys extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey[300],
         appBar: AppBar(
-          backgroundColor: Colors.grey[800],
-          title: const Text("Let's Register....!"),
+          backgroundColor: const Color.fromARGB(255, 132, 93, 198),
+          title: const Text("Student Registration"),
         ),
         body: SafeArea(
           child: ListView(
